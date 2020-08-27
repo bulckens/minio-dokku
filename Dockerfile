@@ -1,3 +1,4 @@
+# Pull latest minio
 FROM minio/minio:latest
 
 # Add user dokku with an individual UID
