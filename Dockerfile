@@ -10,6 +10,7 @@ RUN mkdir -p /home/dokku/data
 
 # Add custom nginx.conf template for Dokku to use
 WORKDIR /app
+ADD CHECKS .
 ADD nginx.conf.sigil .
 
 # Run the server and point to the created directory
