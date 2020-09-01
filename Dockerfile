@@ -8,6 +8,10 @@ USER dokku
 # Create data directory for the user, where we will keep the data
 RUN mkdir -p /home/dokku/data
 
+# Make sure entrypont is executable
+RUN chmod 777 /usr/bin/docker-entrypoint.sh \
+    && ln -s /usr/bin/docker-entrypoint.sh /
+
 # Add custom nginx.conf template for Dokku to use
 WORKDIR /app
 ADD CHECKS .
