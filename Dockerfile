@@ -1,5 +1,5 @@
 # Pull latest minio
-FROM minio/minio:latest
+FROM minio/minio:edge
 
 # Add user dokku with an individual UID
 RUN adduser -D -u 32769 -g dokku dokku
